@@ -1,0 +1,5 @@
+breath-counter.iml
+local.properties
+.gradle/*
+build/*
+.idea/*

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+    }
+}
+
+android {
+
+    compileSdkVersion "Google Inc.:Google APIs:24"
+    buildToolsVersion "25.0.0"
+
+
+    signingConfigs {
+        release {
+            storeFile file(AREA_MAPPER_RELEASE_STORE_FILE)
+            storePassword AREA_MAPPER_RELEASE_STORE_PASSWORD
+            keyAlias AREA_MAPPER_RELEASE_KEY_ALIAS
+            keyPassword AREA_MAPPER_RELEASE_KEY_PASSWORD
+        }
+    }
+
+
+    defaultConfig {
+        applicationId "org.commcare.respiratory"
+        minSdkVersion 9
+        targetSdkVersion 11
+        versionCode 5
+        versionName "5.0"
+    }
+
+    buildTypes {
+
+        debug {
+            resValue "string", "google_maps_api_key", AREA_MAPPER_GOOGLE_PLAY_MAPS_API_KEY
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "google_maps_api_key", AREA_MAPPER_GOOGLE_PLAY_MAPS_API_KEY
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.0'
+}

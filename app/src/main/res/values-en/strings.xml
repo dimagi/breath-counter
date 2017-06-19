@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Welcome to the breath recording activity!</string>
+    <string name="app_name">Breath Counter</string>
+    <string name="start_button">Press to Start</string>
+    <string name="breath_button">Press each Breath</string>
+    <string name="reset_button">Start Over</string>
+    <string name="record_button">Submit Results</string>
+    <string name="seconds_label">Seconds:</string>
+    <string name="breaths_label">Breaths:</string>
+    <string name="bpm_label">Breaths per Minute:</string>
+    <string name="reset_question">Breaths per Minute</string>
+    <string name="reset_dialogue">Are you sure you want to reset the count?</string>
+    <string name="reset">Start Over</string>
+    <string name="do_not_reset">Do not Reset</string>
+    <string name="speak_result">%s Breaths per Minute</string>
+</resources>

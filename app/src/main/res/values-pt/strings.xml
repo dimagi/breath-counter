@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Olá, mundo, atividade contra fôlego!</string>
+    <string name="app_name">contador de respiração</string>
+    <string name="start_button">Pressione para Começar</string>
+    <string name="breath_button">Pressione por cada Respiração</string>
+    <string name="reset_button">Começa de Novo</string>
+    <string name="record_button">Grave os resultados da contagem respiratória</string>
+    <string name="seconds_label">Segundos:</string>
+    <string name="breaths_label">Respirações:</string>
+    <string name="bpm_label">Respirações por minuto:</string>
+    <string name="reset_question">Respirações por Minuto</string>
+    <string name="reset_dialogue">Tem a certeza que pretende repor a contagem?</string>
+    <string name="reset">Começa de Novo</string>
+    <string name="do_not_reset">Não reponha</string>
+    <string name="speak_result">%s Respirações por Minuto</string>
+</resources>

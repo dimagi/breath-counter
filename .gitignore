@@ -1,3 +1,5 @@
+*.iml*
+app/build/
 breath-counter.iml
 local.properties
 .gradle/*

@@ -1,1 +1,1 @@
-include ':app', ':org.commcare.respiratory'
+include ':org.commcare.respiratory'

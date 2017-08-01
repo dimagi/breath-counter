@@ -19,7 +19,7 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "org.commcare.respiratory"
+        applicationId "org.willpride.respiratory"
         minSdkVersion 9
         targetSdkVersion 11
         versionCode 7

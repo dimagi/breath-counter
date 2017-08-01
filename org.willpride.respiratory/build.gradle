@@ -20,8 +20,8 @@ android {
 
     defaultConfig {
         applicationId "org.commcare.private"
-        minSdkVersion 9
-        targetSdkVersion 11
+        minSdkVersion 23
+        targetSdkVersion 23
         versionCode 7
         versionName "7.0"
 

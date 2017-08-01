@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fanisàna fisefoana</string>
+    <string name="bpm_label">Fisefoana isa-minitra:</string>
+    <string name="breath_button">Tsindrio isaky ny miaina</string>
+    <string name="breaths_label">Fisefoana:</string>
+    <string name="do_not_reset">Do not Reset</string>
+    <string name="hello">Welcome to the breath recording activity!</string>
+    <string name="record_button">Alefa ny valiny</string>
+    <string name="reset">Hanisa indray</string>
+    <string name="reset_button">Hanisa indray</string>
+    <string name="reset_dialogue">Are you sure you want to reset the count?</string>
+    <string name="reset_question">Fisefoana isa-minitra</string>
+    <string name="seconds_label">Segondra:</string>
+    <string name="speak_result">%s Fisefoana isa-minitra</string>
+    <string name="start_button">Tsindrio hanomboana azy</string>
+</resources>

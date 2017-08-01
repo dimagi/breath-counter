@@ -1,0 +1,273 @@
+[
+    {
+        "outputFile": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mg/values-mg.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 131,
+                        "endColumn": 55,
+                        "endOffset": 182
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 111,
+                    "endColumn": 60,
+                    "endOffset": 167
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 537,
+                        "endColumn": 60,
+                        "endOffset": 593
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 172,
+                    "endColumn": 66,
+                    "endOffset": 234
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 252,
+                        "endColumn": 66,
+                        "endOffset": 314
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 239,
+                    "endColumn": 52,
+                    "endOffset": 287
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 484,
+                        "endColumn": 52,
+                        "endOffset": 532
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 292,
+                    "endColumn": 53,
+                    "endOffset": 341
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 796,
+                        "endColumn": 53,
+                        "endOffset": 845
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 346,
+                    "endColumn": 75,
+                    "endOffset": 417
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 75,
+                        "endOffset": 126
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 422,
+                    "endColumn": 57,
+                    "endOffset": 475
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 374,
+                        "endColumn": 57,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 480,
+                    "endColumn": 47,
+                    "endOffset": 523
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 748,
+                        "endColumn": 47,
+                        "endOffset": 791
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 528,
+                    "endColumn": 54,
+                    "endOffset": 578
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 319,
+                        "endColumn": 54,
+                        "endOffset": 369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 583,
+                    "endColumn": 84,
+                    "endOffset": 663
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 663,
+                        "endColumn": 84,
+                        "endOffset": 743
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 668,
+                    "endColumn": 64,
+                    "endOffset": 728
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 598,
+                        "endColumn": 64,
+                        "endOffset": 658
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 733,
+                    "endColumn": 51,
+                    "endOffset": 780
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 432,
+                        "endColumn": 51,
+                        "endOffset": 479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 785,
+                    "endColumn": 65,
+                    "endOffset": 846
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 850,
+                        "endColumn": 65,
+                        "endOffset": 911
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 851,
+                    "endColumn": 64,
+                    "endOffset": 911
+                },
+                "from": {
+                    "file": "/Users/willpride/Dimagi/breath-counter/org.commcare.private/src/main/res/values-mg/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 187,
+                        "endColumn": 64,
+                        "endOffset": 247
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,4 +1,4 @@
-package org.commcare.private;
+package org.willpride.respiratory;
 
 import android.app.Activity;
 import android.content.Context;

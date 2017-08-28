@@ -208,6 +208,8 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         this.mBreathButton.setPadding(0, 0, 0, 0);
         this.mResetButton1.setPadding(0, 0, 0, 0);
         this.mResetButton2.setPadding(3, 3, 3, 3);
+        this.mResetButton1.setTextColor(Color.BLACK);
+        this.mResetButton2.setTextColor(Color.BLACK);
         this.mRecordAnswerButton.setPadding(3, 3, 3, 3);
         this.mBreathCountView.setPadding(0, 0, 0, 0);
         this.mTimeView.setPadding(0, 0, 0, 0);

@@ -182,6 +182,8 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         this.mBreathButton = new Button(this);
         this.mResetButton1 = new Button(this);
         this.mResetButton2 = new Button(this);
+        this.mResetButton1.setTextColor(Color.BLACK);
+        this.mResetButton2.setTextColor(Color.BLACK);
         this.mRecordAnswerButton = new Button(this);
         this.mQuestionButton = new ImageView(this);
         this.mBreathCountView.setTextSize(1, 18.0f);
@@ -304,6 +306,8 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
     }
 
     private void enableResetButton() {
+        this.mResetButton1.setTextColor(Color.BLACK);
+        this.mResetButton2.setTextColor(Color.BLACK);
         this.mResetButton1.setBackgroundColor(Color.rgb(255, 102, 102));
         this.mResetButton1.setEnabled(true);
         this.mResetButton2.setBackgroundColor(Color.rgb(255, 102, 102));

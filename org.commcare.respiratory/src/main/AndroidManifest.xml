@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.commcare.respiratory">
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="9" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <application android:label="@string/app_name" android:icon="@drawable/micon">
         <activity android:label="@string/app_name" android:name="org.commcare.respiratory.BreathCounterActivity" android:screenOrientation="portrait">

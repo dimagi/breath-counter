@@ -19,34 +19,31 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+
 import java.text.DecimalFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import static android.R.drawable.ic_lock_silent_mode_off;
 
 public class BreathCounterActivity extends Activity implements OnInitListener {
     private Integer mAnswer;
-    private final int mAnswerFontsize = 18;
     private Button mBreathButton;
     private TextView mBreathCountView;
     private int mBreaths;
     private TextView mBreathsPerMinView;
-    private final int mButtonFontSize = 25;
     private Counter mHandler;
     private ImageView mQuestionButton;
     private Button mRecordAnswerButton;
     private Button mResetButton1;
     private Button mResetButton2;
     private Double mSeconds;
-    private final int mTextFontSize = 30;
     private TextView mTimeView;
-    private final int paddingInt = 0;
     private boolean playAudio = true;
     private LinearLayout recordContainer;
-    private final int reportButtonInt = 3;
     private LinearLayout reportContainer;
-    private final int textPaddingInt = 0;
     private TextToSpeech tts;
+    private long mStartTime;
 
     class C00012 implements OnClickListener {
         C00012() {
@@ -121,6 +118,7 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         }
 
         public void start() {
+            mStartTime = new Date().getTime();
             this.stop = false;
             BreathCounterActivity.this.updateSeconds();
         }
@@ -218,7 +216,7 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         if (this.mAnswer != null) {
             disableBreathButton();
         }
-        final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        final Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
         this.mBreathButton.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 AlphaAnimation alphaDown = new AlphaAnimation(1.0f, 0.3f);
@@ -332,21 +330,26 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
 
     private void updateSeconds() {
         if (this.mHandler.running()) {
+            mSeconds = calculateSeconds();
             if (this.mSeconds.doubleValue() <= 60.0d) {
-                this.mSeconds = Double.valueOf(this.mSeconds.doubleValue() + 0.1d);
-                setSeconds(this.mSeconds.doubleValue());
+                setSeconds(mSeconds);
                 this.mHandler.count(100);
             }
             if (this.mSeconds.doubleValue() > 59.9d) {
                 this.mHandler.stop();
                 MediaPlayer.create(this, R.raw.beep).start();
-                ((Vibrator) getSystemService(Context.VIBRATOR_SERVICE)).vibrate(500);
+                ((Vibrator)getSystemService(Context.VIBRATOR_SERVICE)).vibrate(500);
                 this.mAnswer = Integer.valueOf(this.mBreaths);
                 setSeconds(60.0d);
                 setAnswer(this.mAnswer.intValue());
                 setToReportScreen();
             }
         }
+    }
+
+    private Double calculateSeconds() {
+        long diff = new Date().getTime() - mStartTime;
+        return diff / 1000d;
     }
 
     private void setSeconds(double count) {

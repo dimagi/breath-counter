@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">सांस की रिकॉर्डिंग गतिविधि में आपका स्वागत है!</string>
+    <string name="app_name">सांस की गिनती</string>
+    <string name="start_button">शुरू करने के लिए दबाएँ</string>
+    <string name="breath_button">प्रत्येक सांस को दबाएं</string>
+    <string name="reset_button">फिर से शुरू करें</string>
+    <string name="record_button">परिणाम जमा करें</string>
+    <string name="seconds_label">सेकंड:</string>
+    <string name="breaths_label">सांस:</string>
+    <string name="bpm_label">सांस प्रति मिनट:</string>
+    <string name="reset_question">सांस प्रति मिनट</string>
+    <string name="reset_dialogue">क्या आप वाकई गणना को रीसेट करना चाहते हैं?</string>
+    <string name="reset">फिर से शुरू करें</string>
+    <string name="do_not_reset">रीसेट न करें</string>
+    <string name="speak_result">%s सांस प्रति मिनट</string>
+</resources>

@@ -15,12 +15,12 @@ ext {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "org.commcare.respiratory"
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdkVersion 33
         versionCode 11
         versionName "11.0"
 

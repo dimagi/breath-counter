@@ -15,14 +15,14 @@ ext {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "org.commcare.respiratory"
         minSdkVersion 14
-        targetSdkVersion 29
-        versionCode 11
-        versionName "11.0"
+        targetSdkVersion 33
+        versionCode 12
+        versionName "12.0"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
@@ -48,5 +48,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }

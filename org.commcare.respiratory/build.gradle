@@ -21,8 +21,8 @@ android {
         applicationId "org.commcare.respiratory"
         minSdkVersion 14
         targetSdkVersion 34
-        versionCode 12
-        versionName "12.0"
+        versionCode 15
+        versionName "15.0"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 

@@ -15,6 +15,7 @@ ext {
 }
 
 android {
+    namespace 'org.commcare.respiratory'
     compileSdk 36
 
     defaultConfig {

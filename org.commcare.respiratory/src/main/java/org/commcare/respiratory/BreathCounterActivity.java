@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Insets;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +15,7 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowInsets;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,6 +26,11 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.annotation.NonNull;
+import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import static android.R.drawable.ic_lock_silent_mode_off;
 
@@ -267,6 +275,27 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         registerForContextMenu(this.mRecordAnswerButton);
         registerForContextMenu(this.mQuestionButton);
         clearAnswer();
+
+        // Edge-to-edge insets handling for Android 15 and above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+            View contentView = findViewById(android.R.id.content);
+
+            ViewCompat.setOnApplyWindowInsetsListener(contentView, new OnApplyWindowInsetsListener() {
+                @NonNull
+                @Override
+                public WindowInsetsCompat onApplyWindowInsets(@NonNull View view, @NonNull WindowInsetsCompat insets) {
+                    WindowInsets windowInsets = view.getRootWindowInsets();
+
+                    if (windowInsets != null) {
+                        Insets systemBars = windowInsets.getSystemWindowInsets();
+                        // Apply padding so content doesn't overlap with system bars
+                        view.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                    }
+
+                    return insets;
+                }
+            });
+        }
     }
 
     public void onDestroy() {

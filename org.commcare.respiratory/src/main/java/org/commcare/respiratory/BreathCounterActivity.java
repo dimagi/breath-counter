@@ -35,6 +35,11 @@ import androidx.core.view.WindowInsetsCompat;
 import static android.R.drawable.ic_lock_silent_mode_off;
 
 public class BreathCounterActivity extends Activity implements OnInitListener {
+    private static final String KEY_BREATHS = "breaths";
+    private static final String KEY_START_TIME = "start_time";
+    private static final String KEY_RUNNING = "running";
+    private static final String KEY_ANSWER = "answer";
+
     private Integer mAnswer;
     private Button mBreathButton;
     private TextView mBreathCountView;
@@ -127,6 +132,12 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
 
         public void start() {
             mStartTime = new Date().getTime();
+            this.stop = false;
+            BreathCounterActivity.this.updateSeconds();
+        }
+
+        // Continues a count whose mStartTime was restored from saved state
+        public void resume() {
             this.stop = false;
             BreathCounterActivity.this.updateSeconds();
         }
@@ -275,6 +286,9 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         registerForContextMenu(this.mRecordAnswerButton);
         registerForContextMenu(this.mQuestionButton);
         clearAnswer();
+        if (savedInstanceState != null) {
+            restoreState(savedInstanceState);
+        }
 
         // Edge-to-edge insets handling for Android 15 and above
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
@@ -298,7 +312,43 @@ public class BreathCounterActivity extends Activity implements OnInitListener {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_BREATHS, this.mBreaths);
+        outState.putLong(KEY_START_TIME, this.mStartTime);
+        outState.putBoolean(KEY_RUNNING, this.mHandler.running());
+        outState.putInt(KEY_ANSWER, this.mAnswer == null ? -1 : this.mAnswer);
+    }
+
+    // Restores a count in progress or a finished result after the activity is recreated,
+    // e.g. on rotation, which Android 16 allows on large screens despite screenOrientation
+    private void restoreState(Bundle state) {
+        int breaths = state.getInt(KEY_BREATHS, 0);
+        int answer = state.getInt(KEY_ANSWER, -1);
+        boolean running = state.getBoolean(KEY_RUNNING, false);
+        if (answer != -1) {
+            this.mBreathButton.setText(getResources().getString(R.string.breath_button));
+            setBreaths(breaths);
+            setSeconds(60.0d);
+            setAnswer(answer);
+            enableResetButton();
+            setContentView(this.reportContainer);
+        } else if (running) {
+            this.mStartTime = state.getLong(KEY_START_TIME);
+            this.mBreathButton.setText(getResources().getString(R.string.breath_button));
+            setBreaths(breaths);
+            enableResetButton();
+            this.mHandler.resume();
+        }
+    }
+
     public void onDestroy() {
+        // Stop the old instance's timer so it doesn't beep or vibrate after recreation
+        if (this.mHandler != null) {
+            this.mHandler.stop();
+            this.mHandler.removeMessages(0);
+        }
         if (this.tts != null) {
             this.tts.stop();
             this.tts.shutdown();

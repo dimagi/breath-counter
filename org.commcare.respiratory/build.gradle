@@ -16,12 +16,12 @@ ext {
 
 android {
     namespace 'org.commcare.respiratory'
-    compileSdk 36
+    compileSdk 37
 
     defaultConfig {
         applicationId "org.commcare.respiratory"
         minSdkVersion 14
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode 16
         versionName "16.0"
 
